@@ -4,230 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cleng's Pastil | Official Page</title>
-
-    <link rel="icon" type="image/jpeg" href="https://scontent.fmnl17-1.fna.fbcdn.net/v/t39.30808-6/483969786_122094017612815606_8911824388651236039_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=100&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeEShDPCl0SKg6kNlhwyy_p8UnodqXl-ml9Seh2peX6aX_21vkVMvKdKQKjM7wRIcyVamYXh7TdFmak8eq9T48oo&_nc_ohc=8Yx7aycXW00Q7kNvwGqqSN6&_nc_oc=AdmZF11QDtGd8MUEGUXmZZkVUN30e26lCBU280eu_On-7nnQGYnkOlubeYZuythyGzo&_nc_zt=23&_nc_ht=scontent.fmnl17-1.fna&_nc_gid=kvAcNY2ObOT0mVAk1WDGrQ&oh=00_AfsvWRDRN3hVp4z800sAZVxQvpVpRIyCMkiKkRS--wBnsg&oe=698DCF49">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
     <style>
-        :root {
-            --primary: #c0392b;
-            --secondary: #2c3e50;
-            --light-orange: #f2e4d5;
-            --white: #ffffff;
-            --spicy: #e67e22;
-        }
+        :root { --primary: #c0392b; --secondary: #2c3e50; --light: #f2e4d5; --white: #ffffff; --spicy: #e67e22; }
+        body { font-family: sans-serif; margin: 0; background-color: var(--light); color: var(--secondary); text-align: center; }
+        header { background: var(--white); padding: 1rem; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .hero { background: #444; color: white; padding: 40px 20px; }
+        .menu-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding: 20px; }
+        .product-card { background: var(--white); border-radius: 15px; width: 320px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); padding-bottom: 20px; }
+        
+        /* Image box */
+        .img-box { width: 100%; height: 200px; background: #eee; overflow: hidden; }
+        .img-box img { width: 100%; height: 100%; object-fit: cover; }
 
-        body {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            background-color: var(--light-orange);
-            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%238d6e63' fill-opacity='0.12'%3E%3Cpath d='M15 10c-2 0-3 2-3 4v12h2V10h1v14h1V10h1v14h1V10h1v16c0 3-2 5-5 5s-5-2-5-5V14c0-2 1-4 3-4zM12 40h6v30h-6zM85 15c-4 0-7 4-7 9s3 9 7 9 7-4 7-9-3-9-7-9zM82 40h6v30h-6zM45 70c4 0 7 3 7 7s-3 7-7 7-7-3-7-7 3-7 7-7zm0 15h10v5H45z'/%3E%3C/g%3E%3C/svg%3E");
-            background-size: 120px 120px;
-            color: var(--secondary);
-        }
-
-        header {
-            background: var(--white);
-            padding: 0.8rem 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            position: sticky; top: 0; z-index: 1000;
-        }
-
-        .logo { display: flex; align-items: center; gap: 12px; font-weight: 700; color: var(--primary); text-decoration: none; }
-        .logo img { height: 45px; width: 45px; border-radius: 50%; border: 2px solid var(--primary); }
-
-        .cart-icon { background: var(--primary); color: white; padding: 8px 18px; border-radius: 25px; font-weight: 600; }
-
-        .hero {
-            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)),
-                        url('https://scontent.fmnl17-5.fna.fbcdn.net/v/t39.30808-6/484401984_122094457940815606_8082922643909571621_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=110&ccb=1-7&_nc_sid=cc71e4&_nc_eui2=AeHZGxdPQdoAb2tuhCccKkKGx5BLh3_ES8vHkEuHf8RLyy-G1AV_szusxP1w9-W26EDl_6kJ2E7GCnP49QWyHq54&_nc_ohc=61mOszLFgUsQ7kNvwGc7O9H&_nc_oc=Adkv6tpYpZGVCKsmugVghXfKB5dDYAvUoqxzrADnNnnRmP8Lw056sZjIIxQOLzJ4SDE&_nc_zt=23&_nc_ht=scontent.fmnl17-5.fna&_nc_gid=bkpU1HbZU8AzHmhGUh_zHA&oh=00_AftRd82QS3pqbQ7U7qouVxuRF0Wzp75ipTHsLWcacTaC9g&oe=698DE1AB');
-            background-size: cover; background-position: center; height: 320px;
-            display: flex; flex-direction: column; justify-content: center; align-items: center; color: white;
-            text-align: center;
-        }
-
-        .hero h1 { font-size: 2.8rem; margin: 0; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
-
-        .menu-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
-            padding: 4rem 5%;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .product-card {
-            background: var(--white);
-            border-radius: 24px;
-            overflow: hidden;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
-            position: relative;
-            display: flex;
-            flex-direction: column;
-        }
-        .img-crop-window {
-            width: 100%;
-            height: 250px;
-            overflow: hidden; /* This acts as a 'frame' to hide overlap */
-            position: relative;
-            background-color: #f0f0f0;
-        }
-
-        .product-img {
-            width: 100%;
-            height: 100%; /* Force it to fill the window */
-            object-fit: cover; /* This prevents overlapping and keeps it centered */
-            display: block;
-        }
-
-        /* Adjusting the center point for your specific photos */
-        .crop-pastil { object-position: center 70%; } 
-        .crop-jar { object-position: center; }
-
-        /* --- MOBILE FIX --- */
-        @media (max-width: 600px) {
-            .img-crop-window {
-                height: 200px; /* Makes images slightly shorter on phones */
-            }
-            .hero h1 {
-                font-size: 1.8rem; /* Keeps the title from being too big */
-            }
-        }
-
-        .product-info { padding: 1.5rem; text-align: center; flex-grow: 1; display: flex; flex-direction: column; }
-        .product-info h3 { margin: 0; color: var(--secondary); font-size: 1.4rem; }
-        .product-info p { font-size: 0.9rem; color: #666; margin: 10px 0; min-height: 50px; }
-
-        .price-tag { color: var(--primary); font-weight: 700; font-size: 2rem; margin: 5px 0; display: block; }
-
-        .variant-selector {
-            display: flex; gap: 8px; justify-content: center; margin: 15px 0;
-        }
-
-        .variant-option {
-            flex: 1; padding: 8px; border: 2px solid #ddd; border-radius: 10px;
-            cursor: pointer; font-size: 0.85rem; font-weight: 600; transition: 0.3s;
-        }
-
-        .variant-selector input { display: none; }
-        .variant-selector input:checked + .variant-option.reg { border-color: var(--secondary); background: var(--secondary); color: white; }
-        .variant-selector input:checked + .variant-option.spicy { border-color: var(--spicy); background: var(--spicy); color: white; }
-
-        .order-btn {
-            width: 100%; padding: 14px; background: var(--primary); color: white;
-            border: none; border-radius: 12px; cursor: pointer; font-weight: 600;
-            font-size: 1rem; transition: 0.3s; margin-top: auto;
-        }
-        .order-btn:hover { background: #a33024; transform: translateY(-2px); }
-
-        /* ABOUT SECTION */
-        .about-section {
-            padding: 4rem 10%; text-align: center; background: rgba(255,255,255,0.4); margin: 2rem 0;
-        }
-        .about-section h2 { color: var(--primary); margin-bottom: 1rem; }
-        .about-section p { line-height: 1.8; color: var(--secondary); max-width: 800px; margin: 0 auto; }
-
-        /* CONTACT SECTION */
-        .contact-section { text-align: center; padding-bottom: 3rem; }
-        .contact-section h2 { color: var(--secondary); margin-bottom: 1.5rem; }
-        .contact-btns { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
-
-        .contact-link {
-            text-decoration: none; color: white; padding: 12px 25px; border-radius: 30px;
-            font-weight: 600; display: flex; align-items: center; gap: 10px; transition: 0.3s;
-        }
-        .fb-btn { background: #1877F2; }
-        .gm-btn { background: #ea4335; }
-        .contact-link:hover { transform: translateY(-3px); opacity: 0.9; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
-
-        footer { text-align: center; padding: 3rem; color: #888; font-size: 0.9rem; border-top: 1px solid rgba(0,0,0,0.05); }
+        .price { color: var(--primary); font-size: 1.5rem; font-weight: bold; margin: 10px 0; }
+        .variant-selector { display: flex; justify-content: center; align-items: center; gap: 10px; margin-bottom: 15px; }
+        .btn { padding: 8px 12px; border: 1px solid #ccc; border-radius: 5px; font-size: 0.8rem; cursor: pointer; }
+        
+        .chicken { width: 40px; height: auto; }
+        .buy-btn { background: var(--primary); color: white; border: none; padding: 12px 30px; border-radius: 8px; font-weight: bold; cursor: pointer; text-decoration: none; display: inline-block; }
     </style>
 </head>
 <body>
 
-<header>
-    <a href="#" class="logo">
-        <img src="https://scontent.fmnl17-1.fna.fbcdn.net/v/t39.30808-6/483969786_122094017612815606_8911824388651236039_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=100&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeEShDPCl0SKg6kNlhwyy_p8UnodqXl-ml9Seh2peX6aX_21vkVMvKdKQKjM7wRIcyVamYXh7TdFmak8eq9T48oo&_nc_ohc=8Yx7aycXW00Q7kNvwGqqSN6&_nc_oc=AdmZF11QDtGd8MUEGUXmZZkVUN30e26lCBU280eu_On-7nnQGYnkOlubeYZuythyGzo&_nc_zt=23&_nc_ht=scontent.fmnl17-1.fna&_nc_gid=kvAcNY2ObOT0mVAk1WDGrQ&oh=00_AfsvWRDRN3hVp4z800sAZVxQvpVpRIyCMkiKkRS--wBnsg&oe=698DCF49" alt="Cleng's Logo">
-        Cleng's Pastil
-    </a>
-</header>
+<header><strong>Cleng's Pastil</strong></header>
 
 <section class="hero">
     <h1>Tikman ang Tunay.</h1>
-    <p>Premium Homemade Pastil — Pure Cravings Satisfied!</p>
+    <p>Premium Homemade Pastil</p>
 </section>
 
 <main class="menu-container">
     <div class="product-card">
-        <div class="img-crop-window">
-            <img src="https://scontent.fmnl17-1.fna.fbcdn.net/v/t39.30808-6/627186451_122147930348815606_3733445379835140643_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeG9g8Icp9Fy3G1HEIw66XCaXNiE5aE33vhc2ITloTfe-BvjdBPOOF2Swabkz4Ze7x4r4ImqByx4HCI4ABMvVIZ2&_nc_ohc=6vyYt9YmbjkQ7kNvwHVkbzR&_nc_oc=Adkn8ORNvsMviTjSuS_qEnA5WMHv1_lvet4u3tJ6iQ08HuVbI4qUQsI71vdlf90gTqA&_nc_zt=23&_nc_ht=scontent.fmnl17-1.fna&_nc_gid=RE_wFMwoKY6sWpaz6AjMLA&oh=00_Aftqb_pNQ84MuMfCTPKuVNQAGdI5unlfqJBxRKVUPB43vQ&oe=698DF1F3" alt="Special Chicken Pastil" class="product-img crop-pastil">
+        <div class="img-box"><img src="pastil.jpg" alt="Pastil"></div>
+        <h3>Special Chicken Pastil</h3>
+        <p class="price">₱35.00</p>
+        <div class="variant-selector">
+            <span class="btn">Regular</span>
+            <span class="btn" style="background: var(--spicy); color: white;">Spicy 🔥</span>
+            <img src="chicken.gif" class="chicken">
         </div>
-        <div class="product-info">
-            <h3>Special Chicken Pastil</h3>
-            <p>Flavorful shredded chicken and rice combo wrapped in banana leaves.</p>
-            <span class="price-tag">₱35.00</span>
-            <div class="variant-selector">
-                <label><input type="radio" name="flavor1" value="regular" checked><div class="variant-option reg">Regular</div></label>
-                <label><input type="radio" name="flavor1" value="spicy"><div class="variant-option spicy">Spicy 🔥</div></label>
-            </div>
-            <a href="https://www.facebook.com/profile.php?id=61574468182423" target="_blank" style="text-decoration: none;">
-                <button class="order-btn">Buy Now</button>
-            </a>
-        </div>
+        <a href="https://www.facebook.com/profile.php?id=61574468182423" class="buy-btn">BUY NOW</a>
     </div>
 
     <div class="product-card">
-        <div class="img-crop-window">
-            <img src="https://scontent.fmnl17-2.fna.fbcdn.net/v/t39.30808-6/571165939_122138364428815606_6637286677722831695_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHAXIPwvjLiguiGu3Az1F5mSIWWwx-73IFIhZbDH7vcgWdLYjnMUD9HVQit0G6nHh_RKxPcm_h4zoB7viwt1c4s&_nc_ohc=GUfthiGsk3sQ7kNvwE_6XHJ&_nc_oc=Admlx1fKVxXPuGJtSTmOQERGLLc2vC-XmeOgKugLmf1Nvq2QUbZn-AYj41Igosjg_Bo&_nc_zt=23&_nc_ht=scontent.fmnl17-2.fna&_nc_gid=ur9DLos2l4D1vLJyPSzybQ&oh=00_AfsytxIuFmfxVGZXnj6DQZCISPKQQJb-UBA4_uLzi13dpQ&oe=698DF593" alt="Pastil Jar" class="product-img crop-jar">
+        <div class="img-box"><img src="jar.jpg" alt="Jar"></div>
+        <h3>Pastil Jar</h3>
+        <p class="price">₱120.00</p>
+        <div class="variant-selector">
+            <span class="btn">Regular</span>
+            <span class="btn" style="background: var(--spicy); color: white;">Spicy 🔥</span>
+            <img src="chicken.gif" class="chicken">
         </div>
-        <div class="product-info">
-            <h3>Pastil Jar</h3>
-            <p>More pastils for more cravings! Upgrade to pastil jar — sulit for a family meal!</p>
-            <span class="price-tag">₱120.00</span>
-            <div class="variant-selector">
-                <label><input type="radio" name="flavor2" value="regular" checked><div class="variant-option reg">Regular</div></label>
-                <label><input type="radio" name="flavor2" value="spicy"><div class="variant-option spicy">Spicy 🔥</div></label>
-            </div>
-            <a href="https://www.facebook.com/profile.php?id=61574468182423" target="_blank" style="text-decoration: none;">
-                <button class="order-btn">Buy Now</button>
-            </a>
-        </div>
+        <a href="https://www.facebook.com/profile.php?id=61574468182423" class="buy-btn">BUY NOW</a>
     </div>
 </main>
 
-<section class="about-section">
-    <h2>Our Story</h2>
-    <p>
-        At <strong>Cleng’s Pastil</strong>, we believe the best meals are the ones that feel like home.
-        Our journey started with a simple goal: to bring the authentic, savory taste of premium homemade
-        pastil to your table daily. We take pride in our <strong>"Tikman ang Tunay"</strong> philosophy,
-        ensuring every jar and wrap is freshly made with love.
-    </p>
-</section>
-
-<section class="contact-section">
-    <h2>Get in Touch</h2>
-    <div class="contact-btns">
-        <a href="https://www.facebook.com/profile.php?id=61574468182423" target="_blank" class="contact-link fb-btn">
-            <i class="fab fa-facebook"></i> Facebook
-        </a>
-        <a href="mailto:clengspastil@gmail.com" class="contact-link gm-btn">
-            <i class="fas fa-envelope"></i> clengspastil@gmail.com
-        </a>
-    </div>
-</section>
-
-<footer>
-    <p>&copy; 2026 Cleng's Pastil | Freshly Made Daily</p>
-</footer>
+<footer><p>&copy; 2026 Cleng's Pastil</p></footer>
 
 </body>
-
 </html>
-
